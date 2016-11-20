@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Pythagorean Identities</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Pythagorean Identities</u><br>
+			Observe the unit circle below, where the radius is `1`.<br>
+			<img src='Unit Circle.svg'></img><br>
+			The vertical line is of length `sin(x)`, and the horizontal is of length `cos(x)`.<br>
+			These form a right triangle with hypotenuse `1`, revealing the first Pythagorean identity:<br>
+			`sin^2(x)+cos^2(x)=1`<br>
+			Divide by `sin^2(x)` to obtain another:<br>
+			`1+cot^2(x)=csc^2(x)`<br>
+			Finally, divide the original by `cos^2(x)`:<br>
+			`tan^2(x)+1=sec^2(x)`
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		img {
+			width: 390px;
+			height: 312px;
+			object-fit: cover;
+		}
+	</style>
+</html>

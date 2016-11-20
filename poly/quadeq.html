@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Quadratic Formula</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Quadratic Formula</u><br>
+			Start with the equation for a quadratic function:<br>
+			`ax^2+bx+c=0`<br>
+			There are now two options: derive, or solve algebraically.
+			<div style='display:flex;width:60%'>
+			<div style='margin-right:4em'>
+			<u>Derivative</u><br>
+			`\frac{d}{dx}(ax^2+bx+c)=0`<br>
+			`2ax_{vertex}+b=0`<br>
+			`2ax_{vertex} = -b`<br>
+			`x_{vertex} = -\frac{b}{2a}`<br>
+			`ax^2+bx+c=0`, and from the vertex, `y_{vertex}+au^2=0`<br>
+			where `u` is the horizontal distance to each root.<br>
+			`\frac{b^2}{4a}-\frac{b^2}{2a}+c=y_{vertex}`<br>
+			`-\frac{b^2}{4a}+\frac{4ac}{4a}=-au^2`<br>
+			`\frac{b^2-4ac}{4a^2}=u^2`<br>
+			`\frac{\pm\sqrt{b^2-4ac}}{2a}=u`<br>
+			Hence, `x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}` 
+			</div>
+			<div>
+			<u>Algebra</u><br>
+			`ax^2+bx=-c`<br>
+			`x^2+\frac{b}{a}x=-\frac{c}{a}`<br>
+			`x^2+\frac{b}{a}x+\frac{b^2}{4a^2}=\frac{b^2}{4a^2}-\frac{c}{a}`<br>
+			`(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}`<br>
+			`x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}`<br>
+			`x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}`
+			</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		img {
+			width: 390px;
+			height: 312px;
+			object-fit: cover;
+		}
+	</style>
+</html>

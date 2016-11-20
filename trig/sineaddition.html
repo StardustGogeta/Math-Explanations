@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Sine Angle Addition</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Sine Angle Addition</u><br>
+			<b>NOTE</b>: Proof taken from <a href='https://goo.gl/s9HCVQ'>Khan Academy</a>.<br>
+			<div style='display:flex;width:80%'>
+			<div style='margin-right:4em'>
+			<img src='Angle Addition.svg'></img>
+			</div>
+			<div>
+			Observe the red angle, `\angle x`, and the blue angle, `\angle y`.<br>
+			The hypotenuse of `\angle (x+y)` is given as `1`.<br>
+			Hence, the length of the green line represents `sin(x+y)`.<br>
+			The bottom part of the line, beneath the horizontal, is given by<br>
+			`cos(x)sin(y)`, as seen on the opposite edge of the rectangle.<br>
+			The upper portion is equal to the value of `sin(x)cos(y)`,<br>
+			as given by the triangle formed in the upper-right.<br>
+			Altogether, `sin(x+y)=sin(x)cos(y)+cos(x)sin(y)`.<br>
+			</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		img {
+			width: 390px;
+			height: 312px;
+			object-fit: cover;
+		}
+	</style>
+</html>

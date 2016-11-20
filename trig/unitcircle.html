@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Unit Circle Trig Ratios</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Unit Circle Trigonometric Ratio Definitions</u><br>
+			<img src='trigDefs.svg'></img><br>
+			Given any angle `\theta`, the basic trigonometric ratios can all be defined geometrically on the circle of radius `1`.<br>
+			`sin(x)` is the side of the small triangle opposite the angle.<br>
+			`cos(x)` is the side of the small triangle adjacent to the angle.<br>
+			`tan(x)` is the side of the large triangle opposite the angle.<br>
+			`csc(x)` is the hypotenuse of the large, bottom triangle.<br>
+			`sec(x)` is the hypotenuse of the large, top triangle.<br>
+			`cot(x)` is the side of the large, bottom triangle opposite the angle..<br>
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		img {
+			width: 390px;
+			height: 312px;
+			object-fit: cover;
+		}
+	</style>
+</html>

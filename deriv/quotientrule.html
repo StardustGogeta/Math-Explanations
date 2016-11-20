@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Quotient Rule</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Quotient Rule</u><br>
+			There are two methods: use the product rule only or add the chain rule.<br>
+			<div style='display:flex;width:60%'>
+			<div style='margin-right:4em'>
+			<u>Product Rule</u><br>
+			Start with the product rule equation, where u and v are differentiable functions of x:<br>
+			`\frac{d}{dx}(uv) = \frac{du}{dx} \cdot v + u \cdot \frac{dv}{dx}`<br>
+			Now, given that `f=\frac{g}{h}`, `g=f\cdot h`,<br>
+			`g' = f'h + fh'`<br>
+			`f'h = g' - fh'`<br>
+			`f' = \frac{g'-fh'}{h}`<br>
+			`f' = \frac{g'-\frac{g}{h}h'}{h}`<br>
+			`f' = \frac{g'h-gh'}{h^2}`<br>
+			</div>
+			<div>
+			<u>Product Rule and Chain Rule</u><br>
+			Alternatively, `\frac{d}{dx}(uv) = \frac{du}{dx} \cdot v + u \cdot \frac{dv}{dx}`<br>
+			Given that `f=g\cdot \frac{1}{h}`,<br>
+			`f' = g'\cdot \frac{1}{h} + g\cdot(-\frac{1}{h^2}\cdot h')`,<br>
+			`f' = \frac{g'}{h}-\frac{gh'}{h^2}`,<br>
+			Finally,<br>
+			`f' = \frac{g'h-gh'}{h^2}`,<br>
+			</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		img {
+			width: 390px;
+			height: 312px;
+			object-fit: cover;
+		}
+	</style>
+</html>
