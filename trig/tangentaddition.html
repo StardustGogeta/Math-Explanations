@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Tangent Angle Addition</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Tangent Angle Addition</u><br>
+			Recall the <a href='sineaddition.html'>sine addition</a> and <a href='cosineaddition.html'>cosine addition</a> formulas:<br>
+			`sin(x+y)=sin(x)cos(y)+cos(x)sin(y)`<br>
+			`cos(x+y)=cos(x)cos(y)-sin(x)sin(y)`<br>
+			Also note the quotient identity: `tan(x)=\frac{sin(x)}{cos(x)}`.<br>
+			Using these three equations, one can determine that<br>
+			`tan(x+y)=\frac{sin(x+y)}{cos(x+y)}`<br>
+			`tan(x+y)=\frac{sin(x)cos(y)+cos(x)sin(y)}{cos(x)cos(y)-sin(x)sin(y)}`<br>
+			`tan(x+y)=\frac{\frac{sin(x)cos(y)}{cos(x)cos(y)}+\frac{cos(x)sin(y)}{cos(x)cos(y)}}{\frac{cos(x)cos(y)}{cos(x)cos(y)}-\frac{sin(x)sin(y)}{cos(x)cos(y)}}`<br>
+			`tan(x+y)=\frac{\frac{sin(x)}{cos(x)}+\frac{sin(y)}{cos(y)}}{1-\frac{sin(x)sin(y)}{cos(x)cos(y)}}`<br>
+			`tan(x+y)=\frac{tan(x)+tan(y)}{1-tan(x)tan(y)}`
+			</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:2.25em;}
+	</style>
+</html>

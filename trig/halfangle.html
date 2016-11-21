@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Half Angle Identities</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Half Angle Identities</u><br>
+			<div style='display:flex;width:80%'>
+			<div style='margin-right:1em'>
+			<u>Sine Half Angle</u><br>
+			Recall the <a href='pythident.html'>pythagorean identity</a>:<br>
+			`sin^2(x)+cos^2(x)=1`<br>
+			`sin^2(x)=1-cos^2(x)`<br>
+			`2sin^2(x)=1-(cos^2(x)-sin^2(x))`<br>
+			Recall the <a href='doubleangle.html'>double angle formula</a>:<br>
+			`2sin^2(x)=1-cos(2x)`<br>
+			`sin^2(x)=\frac{1-cos(2x)}{2}`<br>
+			`sin(x)=\pm\sqrt\frac{1-cos(2x)}{2}`<br>
+			Replace `x` with `\frac{x}{2}`:<br>
+			`sin(\frac{x}{2})=\pm\sqrt\frac{1-cos(x)}{2}`
+			</div>
+			<div style='margin-right:1em'>
+			<u>Cosine Half Angle</u><br>
+			Recall the <a href='pythident.html'>pythagorean identity</a>:<br>
+			`sin^2(x)+cos^2(x)=1`<br>
+			`cos^2(x)=1-sin^2(x)`<br>
+			`2cos^2(x)=1+(cos^2(x)-sin^2(x))`<br>
+			Recall the <a href='doubleangle.html'>double angle formula</a>:<br>
+			`2cos^2(x)=1+cos(2x)`<br>
+			`cos^2(x)=\frac{1+cos(2x)}{2}`<br>
+			`cos(x)=\pm\sqrt\frac{1+cos(2x)}{2}`<br>
+			Replace `x` with `\frac{x}{2}`:<br>
+			`cos(\frac{x}{2})=\pm\sqrt\frac{1+cos(x)}{2}`
+			</div>
+			<div>
+			<u>Tangent Half Angle</u><br>
+			Recall the half angle formulas:<br>
+			`sin(\frac{x}{2})=\pm\sqrt\frac{1-cos(x)}{2}`<br>
+			`cos(\frac{x}{2})=\pm\sqrt\frac{1+cos(x)}{2}`<br>
+			Also note the quotient identity:<br>
+			<span id='big'>
+			`tan(x)=\frac{sin(x)}{cos(x)} \rightarrow tan(\frac{x}{2})=\frac{sin(\frac{x}{2})}{cos(\frac{x}{2})}`.<br>
+			`tan(\frac{x}{2})=\frac{\pm\sqrt\frac{1-cos(x)}{2}}{\pm\sqrt\frac{1+cos(x)}{2}}=\pm\sqrt\frac{1-cos(x)}{1+cos(x)}`<br>
+			Multiplying by `\sqrt\frac{1-cos(x)}{1-cos(x)}`:<br>
+			`tan(\frac{x}{2})=\frac{1-cos(x)}{sin(x)}`<br>
+			Multiplying by `\sqrt\frac{1+cos(x)}{1+cos(x)}`:<br>
+			`tan(\frac{x}{2})=\frac{sin(x)}{1+cos(x)}`
+			</span>
+			</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+		span br {font-size:2em}
+	</style>
+</html>
