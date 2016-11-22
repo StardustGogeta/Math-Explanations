@@ -9,20 +9,19 @@
 	<body>
 		<div id="whitebox" style='font-size:1.25em'>
 			<u>Inverse Trigonometric Derivatives</u><br>
-			Given the `x` and `y` definitions, the derivative of f(x)
-			can be defined as `\frac{dy}{dx}`.<br>
+			The derivative of f(x) can be defined as `\frac{dy}{dx}`.<br>
 			Reflecting across the line `y=x` to produce the inverse,<br>
 			the new slope can be written as `\frac{dx}{dy}`, thus following that<br>
 			`\frac{dx}{dy} \cdot \frac{dy}{dx}=1` and `\frac{d}{dy} f^{-1}(y) \cdot \frac{d}{dx} f(x) = 1`,<br>
 			also said that the derivatives of inverse functions are multiplicative inverses.<br>
 			Alternatively, `f^{-1}(f(x))=x`, and it follows with<br>
 			the chain rule that `\frac{d}{dx}f^{-1}(f(x)) \cdot \frac{d}{dx}f(x) = 1`.<br><br>
-			For example, let `f(x)=sin(x)` and `f^{-1}(x)=sin^{-1}(x)`, hence<br>
-			`\frac{d}{dx}f^{-1}(sin(x)) = \frac{1}{\frac{d}{dx}sin(x)} = \frac{1}{cos(x)}`<br>
-			Remember that <a href='../trig/pythident.html'>`sin^2(x)+cos^2(x)=1`</a>, so `cos(x)=\sqrt{1-sin^2(x)}`.<br>
-			`\frac{d}{dx}f^{-1}(sin(x)) = \frac{1}{\sqrt{1-sin^2(x)}}`<br>
-			Replace `sin(x)` with `x` in the left and right, and `f^{-1}(x)` with `sin^{-1}(x)`:<br>
-			`\frac{d}{dx}sin^{-1}(x) = \frac{1}{\sqrt{1-x^2}}`<br>
+			For example, let `f(x)=\sin(x)` and `f^{-1}(x)=\sin^{-1}(x)`, hence<br>
+			`\frac{d}{dx}f^{-1}(\sin(x)) = \frac{1}{\frac{d}{dx}\sin(x)} = \frac{1}{\cos(x)}`<br>
+			Remember that <a href='../trig/pythident.html'>`\sin^2(x)+\cos^2(x)=1`</a>, so `\cos(x)=\sqrt{1-\sin^2(x)}`.<br>
+			`\frac{d}{dx}f^{-1}(\sin(x)) = \frac{1}{\sqrt{1-\sin^2(x)}}`<br>
+			Replace `\sin(x)` with `x` in the left and right, and `f^{-1}(x)` with `\sin^{-1}(x)`:<br>
+			`\frac{d}{dx}\sin^{-1}(x) = \frac{1}{\sqrt{1-x^2}}`<br>
 		</div>
 	</body>
 	<script>
