@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Derivative of Sine</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Derivative of Sine</u><br>
+			As per the definition of a derivative,<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\sin(x+h)-\sin(x)}{h}`<br>
+			Simplify with the <a href='../trig/sineaddition.html'>sine angle addition formula</a>:<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\sin(x)\cos(h)+\sin(h)\cos(x)-\sin(x)}{h}`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\sin(x)(\cos(h)-1)+\sin(h)\cos(x)}{h}`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\cos(h)-1}{h}\sin(x)+\frac{\sin(h)}{h}\cos(x)`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\cos(h)-1}{h}\frac{\cos(h)+1}{\cos(h)+1}\sin(x)+\frac{\sin(h)}{h}\cos(x)`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\cos^2(h)-1}{h(\cos(h)+1)}\sin(x)+\frac{\sin(h)}{h}\cos(x)`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{-\sin^2(h)}{h(\cos(h)+1)}\sin(x)+\frac{\sin(h)}{h}\cos(x)`<br>
+			`\frac{d}{dx}\sin(x)=\lim_{h\rightarrow0}\frac{\sin(h)}{h}\frac{-\sin(h)}{\cos(h)+1}\sin(x)+\frac{\sin(h)}{h}\cos(x)`<br>
+			Using `\lim_{x\rightarrow0}\frac{\sin(x)}{x}=1`:<br>
+			`\frac{d}{dx}\sin(x)=1\cdot\frac02\cdot\sin(x)+1\cdot\cos(x)`<br>
+			`\frac{d}{dx}\sin(x)=\cos(x)`
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.75em;}
+	</style>
+</html>
