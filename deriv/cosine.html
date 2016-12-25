@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Derivative of Cosine</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Derivative of Cosine</u><br>
+			As per the definition of a derivative,<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos(x+h)-\cos(x)}{h}`<br>
+			Simplify with the <a href='../trig/cosineaddition.html'>cosine angle addition formula</a>:<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos(x)\cos(h)-\sin(h)\sin(x)-\cos(x)}{h}`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos(x)(\cos(h)-1)-\sin(h)\sin(x)}{h}`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos(h)-1}{h}\cos(x)-\frac{\sin(h)}{h}\sin(x)`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos(h)-1}{h}\frac{\cos(h)+1}{\cos(h)+1}\cos(x)-\frac{\sin(h)}{h}\sin(x)`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\cos^2(h)-1}{h(\cos(h)+1)}\cos(x)-\frac{\sin(h)}{h}\sin(x)`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{-\sin^2(h)}{h(\cos(h)+1)}\cos(x)-\frac{\sin(h)}{h}\sin(x)`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=\lim_{h\to0}\frac{\sin(h)}{h}\frac{-\sin(h)}{\cos(h)+1}\cos(x)-\frac{\sin(h)}{h}\sin(x)`<br>
+			Using `\lim_{x\to0}\frac{\sin(x)}{x}=1`:<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=1\cdot\frac02\cdot\cos(x)-1\cdot\sin(x)`<br>
+			`\frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=-\sin(x)`
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.75em;}
+	</style>
+</html>
