@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../CSS/katex.min.css">
+		<script src='../JS/katex.min.js'></script>
+		<script src="../JS/auto-render.min.js"></script>
+		<title>Rational Roots Theorem</title>
+	</head>
+	<body>
+		<div id="whitebox" style='font-size:1.25em'>
+			<u>Rational Roots Theorem</u><br>
+			The rational root theorem states that for any polynomial of integer coefficients<br>
+			`y=a_0x^n+a_1x^{n-1}+\ldots+a_n`,<br>
+			all rational roots (zeros) can be expressed as `\frac pq`
+			where `p` and `q` are integer factors of `a_n` and `a_0`, respectively.<br><br>
+			To see this, break the polynomial into a linear factorization, such as<br>
+			`y=(a_0x+c_0)(a_1x+c_1)(a_2x+c_2)\ldots`<br>
+			Each zero of the function is of the form `\frac{c_n}{a_n}`, and there exist no other zeros.<br>
+			When multiplying each term together, the resulting function will be<br>
+			`y=x^n(a_0a_1a_2\ldots) + \ldots + (c_0c_1c_2\ldots)`<br>
+			Thus, it is clear that the coefficient of the first term is the product of the denominators,
+			and the final, constant term is the product of the numerators.<br>
+			As such, all possible pairs of `p` and `q` are permutations of the factors of the constant and the first coefficient, respectively.
+		</div>
+	</body>
+	<script>
+		set = {delimiters:[{left:"`",right:"`",display:false}]};
+		renderMathInElement(document.getElementById('whitebox'),set);
+	</script>
+	<style>
+		br {font-size:1.5em;}
+	</style>
+</html>
